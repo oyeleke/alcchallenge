@@ -5,7 +5,6 @@ import com.example.oyeleke.alc.application.App;
 import com.example.oyeleke.alc.Utils.Utils;
 import com.example.oyeleke.alc.models.Coins;
 import com.example.oyeleke.alc.network.NetworkRequest;
-import com.example.oyeleke.alc.parser.Parser;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -55,10 +54,6 @@ public class ShowCoinsPresenter {
             @Override
             public void onRequestCompleted(String tag, String response) throws JSONException {
                 view.hideProgressBar();
-//                if(Parser.hasError(response)){
-//                    view.showErrorMessage("Oops an error occurred please try again, from parser");
-//                }
-
                 try{
                     JSONObject object = new JSONObject(response);
                     JSONObject data = object.getJSONObject("Data");

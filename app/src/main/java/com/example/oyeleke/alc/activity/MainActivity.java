@@ -34,8 +34,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        KeepCoinsAdded keepCoinsAdded = new KeepCoinsAdded();
-        for(Coins vcoin: keepCoinsAdded.getKeepCoins() ){
+        for(Coins vcoin: KeepCoinsAdded.getKeepCoins() ){
             coinsList.add(vcoin);
         }
 
